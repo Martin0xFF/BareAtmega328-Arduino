@@ -12,3 +12,8 @@ this line should say
 8. under tools -> burn bootloader
 9. if your chip is an Atmega328 revert the change in step 4 (add the p back)
 10. upload blink onto the chip and add a led and resistor to ensure it all worked
+
+
+16 MHz work around:
+
+When attempting to burn the boot-loader onto a 16MHz Atmega328, you will need to find avrdude.conf within your installation of arduino. Change the signature of the Atmega328P chip (1e 95 0f) to 1e 95 14. revert the changes when you are done. 
