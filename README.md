@@ -28,4 +28,4 @@ this line should say
 
 16 MHz work around:
 
-When attempting to burn the boot-loader onto a 16MHz Atmega328, you will need to find avrdude.conf within your installation of arduino. Change the signature of the Atmega328P chip (1e 95 0f) to 1e 95 14. Burn the bootloader using the "Arduino Duemilanove" as the selected board. Make sure to revert the changes when you are done. 
+When attempting to burn the boot-loader onto a 16MHz Atmega328, you will need to find avrdude.conf (should have a path similar to $HOME/.arduino15/packages/arduino/tools/avrdude/6.3.0-arduino17/etc/avrdude.conf) within your installation of arduino. Change the signature of the Atmega328P chip (1e 95 0f) to 1e 95 14. Burn the bootloader using the "Arduino Duemilanove" as the selected board. Make sure to revert the changes when you are done. 
