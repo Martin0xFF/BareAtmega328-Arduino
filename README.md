@@ -1,4 +1,16 @@
-1. Download the beardboard folder and place it in your local arduino sketch repo in a folder called hardware (if hardware does not exist, create the folder)
+Requirements:
+* Arduino Uno
+* Jumper wires
+* Atmega328P (Atmega328 also works but needs some additional steps)
+* 16 MHz crystal
+* 2 - 20 pF caps
+* USB to serial connector (used to program Atmega328 once bootloader is burned)
+
+Hardware:
+Follow the graphics in the following link https://www.arduino.cc/en/Tutorial/ArduinoToBreadboard for the configuration you are interest in.
+
+Software:
+1. Download the beardboard zip from the above link (you will find it in the "Minimal Circuit ..." heading) and place it in your local arduino sketch repo in a folder called hardware (if hardware does not exist, create the folder)
 2. Depending on the MCU you are using you may need to change the boards.txt file slightly
 3. If the chip is an Atmega328P continue to step 5
 4. If the chip is an Atmega328 open the breadboard/avr/boards.txt and remove the p from the line 
@@ -16,4 +28,4 @@ this line should say
 
 16 MHz work around:
 
-When attempting to burn the boot-loader onto a 16MHz Atmega328, you will need to find avrdude.conf within your installation of arduino. Change the signature of the Atmega328P chip (1e 95 0f) to 1e 95 14. revert the changes when you are done. 
+When attempting to burn the boot-loader onto a 16MHz Atmega328, you will need to find avrdude.conf within your installation of arduino. Change the signature of the Atmega328P chip (1e 95 0f) to 1e 95 14. Burn the bootloader using the "Arduino Duemilanove" as the selected board. Make sure to revert the changes when you are done. 
