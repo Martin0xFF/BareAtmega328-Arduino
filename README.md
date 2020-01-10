@@ -23,8 +23,9 @@ this line should say
 7. under programmer select Arduino as ISP
 8. under tools -> burn bootloader
 9. if your chip is an Atmega328 revert the change in step 4 (add the p back)
-10. upload blink onto the chip and add a led and resistor to ensure it all worked
+10. upload* blink onto the chip and add a led and resistor to ensure it all worked
 
+To upload with a usb to serial device without a Data Trigger Ready (DTR pin) You will need to add a pullup resistor to pin 1 and pull pin 1 to ground until the compilation is completed. When the sketch size is present in the debug terminal stop pulling pin 1 down. 
 
 16 MHz work around:
 
